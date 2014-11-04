@@ -1,0 +1,28 @@
+{
+    "name": "zMaps",
+    "version": "2.2",
+    "description": "zMaps is a Google Maps alternative for Firefox Os",
+    "launch_path": "/index.html",
+    "icons": {
+        "16": "/images/icons/icon_16.png",
+        "32": "/images/icons/icon_32.png",
+        "48": "/images/icons/icon_48.png",
+        "60": "/images/icons/icon_60.png",
+        "64": "/images/icons/icon_64.png",
+        "90": "/images/icons/icon_90.png",        
+        "128": "/images/icons/icon_128.png"
+    },
+    "developer": {
+        "name": "Mozart Diniz",
+        "url": "http://mozartdiniz.com"
+    },
+    "default_locale": "en",
+    "permissions": {
+      "geolocation": {
+        "description": "I need know where you are to put on map"
+      },
+      "storage": {
+        "description": "Allow user to save favorites"
+      }
+   }
+}

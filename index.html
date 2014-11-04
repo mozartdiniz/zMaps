@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <title>zMaps</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- Google Maps Api -->
+    <script src="https://maps.google.com/maps/api/js?v=3.9&sensor=true&libraries=places"></script>
+
+    <!-- libs -->
+    <script src="lib/ol3-2.js"></script>
+
+    <!-- Application Files -->
+    <script src="app/App.Maps.js"></script>
+    <script src="app/App.Search.Geocode.js"></script>
+    <script src="app/App.Search.Places.js"></script>
+    <script src="app/App.Search.Predictions.js"></script>
+    <script src="app/App.Geo.js"></script>
+    <script src="app/App.Geo.Geocoder.js"></script>
+    <script src="app/App.StreetView.js"></script>
+    <script src="app/App.Maps.ChangeLayer.js"></script>
+    <script src="app/App.Routing.js"></script>
+    <script src="app/App.Directions.js"></script>
+    <script src="app/App.Favorites.js"></script>
+    <script src="app/App.js"></script>
+
+    <link rel="stylesheet" href="styles/ol.css" />
+    <link rel="stylesheet" href="styles/gh-fork-ribbon.css" />
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/bootstrap.css">
+
+    <style id="routingStyle"></style>
+
+</head>
+<body>
+
+    <section id="searchBox">
+        <div class="spacer">
+            <div id="clearField"></div>
+            <div id="clearFavoriteSearchIcon"></div>
+            <input type="search" id="searchField">
+        </div>
+    </section>
+
+    <section id="searchResult">
+        <section id="placesSearchResult">
+            <ul>
+                <li></li>
+            </ul>
+        </section>
+    </section>
+
+    <div id="lockOrientation">
+        <img src="images/lock_orientation.png">
+    </div>
+
+    <div id="lockPosition">
+        <img src="images/lock_position.png">
+    </div>
+
+    <div id="changeLayer">
+        <img src="images/layers_ico.png">
+    </div>
+
+    <div id="map"></div>
+
+    <div id="streetViewContainer">
+        <div id="closeBtnStreetView"></div>
+        <div id="giroscopeBtnStreetView"></div>
+        <section id="streetView"></section>
+    </div>
+
+    <div id="layersContainer" visible='false'>
+
+        <ul>
+            <li id="layerStreetItem">Street</li>
+            <li id="layerTrafficItem">Traffic</li>
+            <li id="layerBikeItem">Bicycling</li>
+            <li id="layerTransitItem">Transit</li>
+            <li id="layerStalliteItem">Satellite</li>
+        </ul>
+
+    </div>
+
+    <div id="routing">
+        <div class="routingOptions">
+            <div class="routingItem" id="routingCar"       active="true" travelMode="DRIVING">  </div>
+            <div class="routingItem" id="routingBuss"                    travelMode="TRANSIT">  </div>
+            <div class="routingItem" id="routingBicycling"               travelMode="BICYCLING"></div>
+            <div class="routingItem" id="routingWalk"                    travelMode="WALKING">  </div>
+            <div class="routingItem" id="routingClose">                                         </div>
+        </div>
+        <div class="rountinOriginDestiny">
+            <div class="originDestinyIcon"></div>
+            <div class="originDestinyFieldsContainer">
+                <div class="originField originDestinyFields">
+                    <input type="text" id="routingOriginField">
+                </div>
+                <div class="destinyField originDestinyFields">
+                    <input type="text" id="routingDestinyField">
+                </div>
+            </div>
+            <div class="swapFields"></div>
+        </div>
+        <div class="routeAlternatives" id="routeAlternatives"></div>
+    </div>
+
+    <div class="routingInfo">
+        <div class="travelMode routingCar"></div>
+        <div class="originDestinyIcon"></div>
+        <div class="originDestiny">
+            <div class="originInfo">
+
+            </div>
+            <div class="destinyIcon">
+
+            </div>
+        </div>
+        <div class="closeRoutingPath"></div>
+    </div>
+
+    <div class="alternativeInfo">
+        <!-- nothin :D -->
+    </div>
+
+    <div id="coisa"></div>
+
+    <script>
+
+        //Application initialization
+        App.init();
+
+    </script>
+
+</body>
+</html>
